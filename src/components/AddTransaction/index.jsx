@@ -1,23 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button, Title } from "../../styles/GlobalStyles";
+import { Form, FormInput, FormItem, FormLabel } from "./styles";
 
 export const AddTransaction = () => {
+  const [text, setText] = useState("");
+  const [amount, setAmount] = useState(0);
+
+  const handleChangeText = (e) => {
+    console.log(e.target.value)
+    setText(e.target.value)
+  };
+
+  const handleAmount = (e) => {
+    console.log(e.target.value)
+    setAmount(e.target.value)
+  };
+
   return (
     <>
-      <h3>Add new transaction</h3>
-      <form>
-        <div>
-          <label htmlFor="text">Text</label>
-          <input type="text" id="text" placeholder="Enter text..." />
-        </div>
-        <div >
-          <label htmlFor="amount">
+      <Title>Add new transaction</Title>
+      <Form>
+        <FormItem>
+          <FormLabel htmlFor="text">Text</FormLabel>
+          <FormInput type="text" id="text" value={text} onChange={handleChangeText} placeholder="Enter text..." />
+        </FormItem>
+        <FormItem>
+          <FormLabel htmlFor="amount">
             Amount <br />
             (negative - expense, positive - income)
-          </label>
-          <input type="number" id="amount" placeholder="Enter amount..." />
-        </div>
-        <button >Add transaction</button>
-      </form>
+          </FormLabel>
+          <FormInput type="number" id="amount" value={amount} onChange={handleAmount} placeholder="Enter amount..." />
+        </FormItem>
+        <Button>Add transaction</Button>
+      </Form>
     </>
   );
 };

@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Bar = styled.nav`  
   text-align: center;
-  padding: 15px ;
+  padding: 15px 0px ;
 `
 
 export const BarTitle = styled.h1`
@@ -11,17 +12,19 @@ export const BarTitle = styled.h1`
   font-size: 24px;
 `
 
-export const TransactionFiltersContainer = styled.div`
+export const MainNav = styled.ul`
   border-bottom: 1px solid #e5e9f9;
-`
-
-export const FilterTitle = styled.div`
-  padding: 20px 0 10px;
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding: 10px 0px;
 `
 
-export const FilterButton = styled.button`
+export const NavbarItem = styled.li`
 
+`
+
+export const NavbarLink = styled(Link)`
+  text-decoration: none;
+  color: #2f2d51;
 `

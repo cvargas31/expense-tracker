@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -33,8 +33,33 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+
   }
 `;
+
+export const Wrapper = styled.div`
+  padding: 0 2em;
+  text-align: left ;
+`
+
+export const Title = styled.h2`
+
+`
+
+export const Button = styled.button`
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 1px solid #9c88ff ;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.1s ease-in ;
+  &:hover {
+    color: #9c88ff ;
+    background-color: white;
+  }
+`
