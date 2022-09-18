@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0 auto;
     overscroll-behavior: none;
-    text-align: center ;
+    background-color: #f8f8fa ;
   }
 
   #root {
@@ -43,7 +43,7 @@ export const Wrapper = styled.div`
 `
 
 export const Title = styled.h2`
-
+  color: #2f2d51;
 `
 
 export const Button = styled.button`
