@@ -33,12 +33,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-
+    max-width: 500px;
+    margin: 0 auto;
   }
 `;
 
 export const Wrapper = styled.div`
-  padding: 0 2em;
+  padding: 2em;
   text-align: left ;
 `
 

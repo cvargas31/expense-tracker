@@ -16,7 +16,7 @@ export const Home = () => {
           <Balance />
           <IncomeExpenses />
           <TransactionList />
-          {/* <AddTransaction /> */}
+          <AddTransaction />
         </Wrapper>
       </GlobalProvider>
     </>
