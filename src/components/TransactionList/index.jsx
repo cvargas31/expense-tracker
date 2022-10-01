@@ -8,7 +8,6 @@ import { TransactionsContainer } from "./styles";
 export const TransactionList = () => {
   const { transactions } = useContext(GlobalContext);
   const [transaction, setTransaction] = useLocalStorage("transactions", transactions);
-  console.log(transactions.length > 0);
   return (
     <TransactionsContainer>
       <Title>Transactions</Title>
