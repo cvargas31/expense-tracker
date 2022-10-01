@@ -7,16 +7,20 @@ import { TransactionsContainer } from "./styles";
 
 export const TransactionList = () => {
   const { transactions } = useContext(GlobalContext);
-  const [ transaction, setTransaction ] = useLocalStorage("transactions", transactions);
-  console.log(transaction);
+  const [transaction, setTransaction] = useLocalStorage("transactions", transactions);
+  console.log(transactions.length > 0);
   return (
     <TransactionsContainer>
       <Title>Transactions</Title>
-      <ul>
-        {transactions.map((transaction) => (
-          <Transaction key={transaction.id} {...transaction} />
-        ))}
-      </ul>
+      {transactions.length > 0 ? (
+        <ul>
+          {transactions.map((transaction) => (
+            <Transaction key={transaction.id} {...transaction} />
+          ))}
+        </ul>
+      ) : (
+        <p> Add a transaction </p>
+      )}
     </TransactionsContainer>
   );
 };
